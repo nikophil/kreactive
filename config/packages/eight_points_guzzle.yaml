@@ -1,0 +1,20 @@
+parameters:
+    env(OMDB_ID): ''
+    env(OMDB_API_KEY): ''
+
+eight_points_guzzle:
+    clients:
+        omdb:
+            base_url: "http://www.omdbapi.com"
+
+            options:
+                timeout: 30
+
+                # Configure headers.
+                # More info: http://docs.guzzlephp.org/en/stable/request-options.html#headers
+                headers:
+                    User-Agent: "EightpointsGuzzleBundle/7.0"
+
+            # Find plugins here:
+            # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins
+            plugin: ~
